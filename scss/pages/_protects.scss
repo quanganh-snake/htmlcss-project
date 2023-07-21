@@ -1,0 +1,55 @@
+.protects-title {
+    @include section;
+
+    .section-header {
+        padding: 0 20px;
+
+        >p {
+            padding: 0;
+        }
+    }
+}
+
+.protect-lists {
+    margin-top      : 150px;
+    background-color: $orangeColor-100;
+    position        : relative;
+    padding         : 0 20px 140px;
+
+    .protect-item {
+        display         : flex;
+        flex-direction  : column;
+        background-color: #FFFFFF;
+        margin-top      : 0;
+        min-height      : 431px;
+        border-radius   : 10px;
+
+        .protect-image {
+            border-radius: 10px;
+
+            img {
+                display      : block;
+                width        : 100%;
+                border-radius: 10px;
+                object-fit   : cover;
+            }
+        }
+
+        .protect-details {
+            padding   : 30px;
+            align-self: stretch;
+
+            .protect-heading {
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .protect-lists {
+        .protect-item {
+            margin-top: -150px;
+        }
+    }
+}

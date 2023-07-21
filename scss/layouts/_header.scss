@@ -1,0 +1,209 @@
+.header {
+    background-color: white;
+    box-shadow      : 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    right           : 0;
+    z-index         : 10;
+    width           : 100%;
+
+    [class^="col-"] {
+        margin: 0;
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    .header-inner {
+        position: relative;
+
+        .toggle-menu-mobile {
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+            margin-left: 20px;
+            
+            &::before {
+                display    : block;
+                content    : '\f0c9';
+                font-family: 'Font Awesome 6 Free';
+                font-weight: 900;
+                padding    : 4px 10px;
+                border     : 1px solid #000;
+            }
+        }
+
+        .header-logo {
+            text-align: center;
+
+            a {
+                img {
+                    height: 80px;
+                }
+            }
+        }
+
+        input[type="checkbox"] {
+            display: none;
+
+            &:checked~.header-menu-mobile {
+                transform: translateX(0);
+                opacity  : 1;
+            }
+
+        }
+
+        .header-menu-mobile {
+            position : absolute;
+            top      : 100%;
+            left     : 0;
+            transform: translateX(-100%);
+            opacity  : 0;
+            @include transition("transform, opacity");
+            z-index: 3;
+
+            >ul {
+                display         : flex;
+                flex-direction  : column;
+                justify-content : flex-start;
+                align-items     : flex-start;
+                width           : 100vw;
+                background-color: $secondaryColor;
+
+                >li {
+                    &:nth-child(n):not(:last-child) {
+                        border-bottom: 1px solid #fff;
+                    }
+
+                    a {
+                        display    : block;
+                        width      : 100vw;
+                        color      : #fff;
+                        font-size  : 1.2rem;
+                        font-weight: 400;
+                        line-height: 1.5;
+                        padding    : 10px 30px;
+
+                        &:hover {
+                            opacity: 0.6;
+                        }
+                    }
+                }
+            }
+        }
+
+        .header-icon {
+            display    : flex;
+            gap        : 60px;
+            align-items: center;
+
+            .cart-icon {
+                position: relative;
+
+                span {
+                    position        : absolute;
+                    right           : -10px;
+                    top             : -8px;
+                    display         : block;
+                    border-radius   : 50%;
+                    background-color: $secondaryColor;
+                    color           : #fff;
+                    padding         : 0 6px;
+                    font-size       : 1.3rem;
+                }
+            }
+        }
+
+    }
+}
+
+// RESPONSIVE
+
+@media screen and (min-width: 992px) {
+    .header {
+        .header-inner {
+            .toggle-menu {
+                display: none;
+            }
+
+            .header-logo {
+                text-align: left;
+                height    : 144px;
+
+                a {
+                    img {
+                        height: 100%;
+                    }
+                }
+            }
+
+            .header-menu {
+                position : inherit;
+                transform: inherit;
+                opacity  : 1;
+
+                >ul {
+                    flex-direction  : row;
+                    justify-content : flex-end;
+                    gap             : 60px 0;
+                    width           : 100%;
+                    background-color: inherit;
+
+                    >li {
+                        >a {
+                            width      : 100%;
+                            color      : $textColor;
+                            font-size  : 2rem;
+                            font-weight: 600;
+                            line-height: 1.5;
+                            padding    : 57px 10px;
+
+                            &:hover {
+                                color: $primaryColor;
+                            }
+
+                            >span {
+                                display : block;
+                                height  : 100%;
+                                position: relative;
+
+                                &.active {
+                                    color: $primaryColor;
+
+                                    &::after {
+                                        content         : '';
+                                        display         : block;
+                                        position        : absolute;
+                                        width           : 100%;
+                                        height          : 2px;
+                                        top             : 87px;
+                                        background-color: $primaryColor;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header {
+        .header-inner {
+            .header-menu {
+                >ul {
+                    >li {
+                        >a {
+                            padding-left : 20px;
+                            padding-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

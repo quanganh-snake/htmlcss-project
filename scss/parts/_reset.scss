@@ -1,0 +1,111 @@
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+    outline   : none;
+}
+
+html {
+    font-size: 10px; // 10px : 16px * 100 = 62.5% (16px là font-size của trình duyệt)
+}
+
+body {
+    font-family: $fontFamily;
+    font-size  : $fontSize;
+    line-height: 1.5;
+    color      : $textColor;
+}
+
+img {
+    max-width: 100%;
+    height   : auto;
+}
+
+a {
+    text-decoration: none;
+    color          : $textColor;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+$sizes: 0,
+25,
+50,
+75,
+100;
+
+@each $size in $sizes {
+    .w-#{$size} {
+        width: $size * 1%;
+    }
+
+    .h-#{$size} {
+        height: $size * 1%;
+    }
+}
+
+$displays: (sm, md, lg, xl, xxl),
+(576, 768, 992, 1200, 1400),
+(none, block, inline-block, inline);
+
+$numberColumn: 12;
+$breakPoints : (sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px);
+
+@each $breakPoint,
+$width in $breakPoints {
+    @media screen and (min-width: $width) {
+        @for $i from 1 through $numberColumn {
+            .offset-#{$breakPoint}-#{$i} {
+                margin-left: calc(100% / (12 / $i));
+            }
+        }
+    }
+}
+
+$overfolws: (auto, hidden, visible, scroll);
+
+@each $value in $overfolws {
+
+    .overflow-#{$value} {
+        overflow: $value;
+    }
+
+    .overflow-x-#{$value} {
+        overflow-x: $value;
+    }
+
+    .overflow-y-#{$value} {
+        overflow-y: $value;
+    }
+}
+
+.justify-content-start {
+    justify-content: flex-start;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.align-items-start {
+    align-items: flex-start;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-end {
+    align-items: flex-end;
+}

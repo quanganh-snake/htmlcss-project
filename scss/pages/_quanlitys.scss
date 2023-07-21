@@ -1,0 +1,22 @@
+.quanlitys {
+    @include section(160px, 160px);
+    padding-left : 20px;
+    padding-right: 20px;
+
+    .quanlity-item {
+        padding: 20px;
+
+        svg {
+            width : 67px;
+            height: 67px;
+        }
+
+        .quanlity-content {
+            padding: 0 20px;
+
+            h3.paragraph-2a {
+                margin-bottom: 8px;
+            }
+        }
+    }
+}

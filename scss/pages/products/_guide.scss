@@ -1,0 +1,46 @@
+.guide {
+    @include section(120px, 120px);
+
+    .section-header {
+        margin-bottom: 60px;
+        text-align   : center;
+
+        h2 {
+            width        : 450px;
+            margin       : 0 auto;
+            margin-bottom: 30px;
+        }
+
+        p {
+            @extend h2;
+            padding: 0;
+        }
+    }
+
+    .guide-lists {
+        counter-reset: step;
+
+        .guide-step {
+            position: relative;
+
+            .guide-step-inner {
+
+                &::before {
+                    content         : '';
+                    width           : 148px;
+                    height          : 148px;
+                    display         : block;
+                    border-radius   : 50%;
+                    background-color: $orangeColor-100;
+                    position        : absolute;
+                    z-index         : -1;
+                    top             : 0;
+                    left            : 0;
+                    transform       : translate(50%, -25%);
+                }
+
+                .step-counter {}
+            }
+        }
+    }
+}

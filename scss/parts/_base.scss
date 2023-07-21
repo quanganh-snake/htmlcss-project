@@ -1,0 +1,189 @@
+@import './_mixin';
+@import './variable';
+
+.h1 {
+    font-size  : 5.2rem;
+    font-weight: 800;
+}
+
+.h2 {
+    font-size  : 3.8rem;
+    font-weight: 800;
+}
+
+.h3 {
+    font-size  : 2.8rem;
+    font-weight: 700;
+}
+
+.h4 {
+    font-size  : 2rem;
+    font-weight: 600;
+}
+
+.paragraph-1 {
+    font-size  : 2.8rem;
+    font-style : normal;
+    font-weight: 400;
+    line-height: calc(32 / 28);
+}
+
+.paragraph-1a {
+    @extend .paragraph-1;
+    font-weight: 600;
+}
+
+.paragraph-2 {
+    @extend .paragraph-1;
+    font-size  : 2.4rem;
+    line-height: calc(32 / 24);
+}
+
+.paragraph-2a {
+    @extend .paragraph-2;
+    font-weight: 600;
+}
+
+.paragraph-3 {
+    font-size  : 2rem;
+    font-style : normal;
+    font-weight: 400;
+    line-height: calc(36 / 20);
+}
+
+.paragraph-3a {
+    @extend .paragraph-3;
+    font-weight: 600;
+}
+
+.paragraph-4 {
+    font-size  : 1.6rem;
+    font-style : normal;
+    font-weight: 400;
+    line-height: calc(24 / 16);
+}
+
+.paragraph-4a {
+    @extend .paragraph-4;
+    font-weight: 600;
+}
+
+.caption-1 {
+    font-size  : 1.8rem;
+    font-style : normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.caption-2 {
+    font-size  : 1.2rem;
+    font-style : normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.text-center {
+    text-align: center;
+}
+
+@each $value,
+$color in $greenColors {
+    .text-green#{$value} {
+        color: $color;
+    }
+}
+
+@each $value,
+$color in $orangeColors {
+    .text-orange#{$value} {
+        color: $color;
+    }
+}
+
+@each $value,
+$color in $greyColors {
+    .text-grey#{$value} {
+        color: $color;
+    }
+}
+
+.btn {
+    border       : none;
+    padding      : 16px 14px;
+    border-radius: 8px;
+    color        : #fff;
+    text-align   : center;
+    font-size    : 2rem;
+    font-weight  : 700;
+}
+
+.btn:hover {
+    background-color: $orangeColor-600;
+}
+
+.btn-view {
+    color : #2C2C2C;
+    border: 1px solid $greenColor-800;
+}
+
+.btn-view:hover {
+    color           : #FFFFFF;
+    background-color: $greenColor-800;
+}
+
+.btn-primary {
+    background-color: $greenColor-800;
+}
+
+.form-control {
+    width        : 100%;
+    border       : 1px solid $greyColor-500;
+    padding      : 16px;
+    border-radius: 8px;
+}
+
+.bg-overley {
+    opacity   : 0.6000000238418579;
+    background: #000;
+}
+
+input[type="text"].form-control::placeholder,
+input[type="email"].form-control::placeholder {
+    font-size  : 1.8rem;
+    color      : $greyColor-500;
+    line-height: 1.5;
+}
+
+textarea::placeholder,
+textarea:-moz-placeholder,
+textarea::-moz-placeholder,
+textarea:-ms-input-placeholder,
+textarea::-webkit-input-placeholder {
+    font-size  : 1.8rem;
+    color      : $greyColor-500;
+    font-family: $fontFamily;
+    font-weight: 700;
+}
+
+@for $i from 1 through 5 {
+
+    .mx-#{$i}x {
+        margin: 0 calc($i * 10) + px;
+    }
+
+    .my-#{$i}x {
+        margin: calc($i * 10) + px 0;
+    }
+
+    .px-#{$i}x {
+        padding: 0 calc($i * 10) + px;
+    }
+
+    .py-#{$i}x {
+        padding: calc($i * 10) + px 0;
+    }
+}
+
+.section-header {
+    @include section-header;
+}

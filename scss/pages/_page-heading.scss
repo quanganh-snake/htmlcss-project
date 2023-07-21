@@ -1,0 +1,24 @@
+.page-heading {
+    overflow: hidden;
+
+    margin-top      : 88px;
+    background-color: $greenColor-100;
+
+    .page-heading-inner {
+        h1 {
+            padding   : 45px 50px;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .page-heading {
+        margin-top      : 146px;
+        .page-heading-inner {
+            h1 {
+                text-align: left;
+            }
+        }
+    }
+}

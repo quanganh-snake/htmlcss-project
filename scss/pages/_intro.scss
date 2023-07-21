@@ -1,0 +1,122 @@
+.intro-box {
+    overflow: hidden;
+    margin-top: 88px;
+
+    .intro-content {
+        display        : flex;
+        flex-direction : column;
+        align-items    : center;
+        justify-content: center;
+        padding        : 10px 50px;
+        text-align     : center;
+
+        >h1 {
+            font-size  : 3rem;
+            font-weight: 800;
+        }
+
+        >h2 {
+            font-size    : 4rem;
+            font-weight  : 800;
+            line-height  : 1.2;
+            margin-bottom: 32px;
+        }
+    }
+
+    >.row {
+        >[class^="col-"] {
+            &:last-child {
+                background-color: $greenColor-200;
+            }
+        }
+    }
+
+    .intro-brand {
+        display: flex;
+        padding: 66px 0;
+
+        >.row {
+            >[class^="col-"] {
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .brand-text {
+            height     : 100%;
+            display    : flex;
+            align-items: center;
+            margin-left: -100px;
+
+            span {
+                transform     : rotate(90deg);
+                text-transform: uppercase;
+                color         : $greenColor-1000;
+                font-size     : 12rem;
+                font-weight   : 800;
+                line-height   : 1;
+                opacity       : 0.15000000596046448;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width : 992px) {
+    .intro-box {
+        margin-top: 146px;
+
+        >.row {
+            >[class^="col-"] {
+                &:last-child {
+                    border-radius: 20px 0 0 20px;
+                }
+            }
+        }
+
+        .intro-brand {
+            >.row {
+                >[class^="col-"] {
+                    &:first-child {
+                        margin-left: -80px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width : 1200px) {
+    .intro-box {
+        .intro-content {
+            align-items: flex-start;
+            text-align : left;
+
+            >h1 {
+                font-size: 4rem;
+            }
+
+            >h2 {
+                font-size: 5.2rem;
+            }
+        }
+
+        .intro-brand {
+
+            >.row {
+                >[class^="col-"] {
+                    &:first-child {
+                        margin-left: -100px;
+                    }
+                }
+            }
+
+            .brand-text {
+                span {
+                    font-size: 14rem;
+                }
+            }
+        }
+    }
+}

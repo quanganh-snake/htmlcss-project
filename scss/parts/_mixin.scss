@@ -1,0 +1,24 @@
+@mixin transition($property, $duration: 0.4s, $timing: ease) {
+    transition-property       : $property;
+    transition-duration       : $duration;
+    transition-timing-function: $timing;
+}
+
+@mixin section($top: 120px, $bottom: 120px) {
+    padding-top   : $top;
+    padding-bottom: $bottom;
+    overflow      : hidden;
+}
+
+@mixin section-header($padding-Y: 10px, $padding-X: 0) {
+    text-align: center;
+    padding   : $padding-Y $padding-X;
+
+    >h2 {
+        margin-bottom: 28px;
+    }
+
+    >p {
+        padding: 0 23%;
+    }
+}

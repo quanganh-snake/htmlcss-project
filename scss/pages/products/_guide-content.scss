@@ -1,0 +1,26 @@
+section.guide-content {
+    .guide-content-left {
+        width           : 100%;
+        background-color: #FFFFFF;
+        border-radius   : 0px 10px 10px 0px;
+        box-shadow      : rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        position        : relative;
+
+        &::before {
+            content         : '';
+            position        : absolute;
+            display         : block;
+            width           : 10px;
+            height          : 100%;
+            border-radius   : 0px 10px 10px 0px;
+            background-color: $greenColor-800;
+        }
+
+        .content-left-inner {
+            width  : 100%;
+            padding: 80px 65px;
+        }
+    }
+
+    .guide-content-right {}
+}

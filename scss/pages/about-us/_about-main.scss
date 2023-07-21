@@ -1,0 +1,76 @@
+.about-main {
+    background   : url('/images/img_AboutBG.png'), lightgray 50% / cover no-repeat;
+    object-fit   : contain;
+    height       : 470px;
+    margin-bottom: 120px;
+
+    .main-content {
+        color          : #FFFFFF;
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : space-between;
+
+        >p {
+            display   : block;
+            padding   : 20px 80px;
+            text-align: justify;
+            position  : relative;
+
+            &::before {
+                content         : '';
+                position        : absolute;
+                display         : none;
+                top             : -30%;
+                left            : 6%;
+                width           : 134px;
+                height          : 104px;
+                background-image: url('/images/img-“-left.png');
+            }
+
+            &::after {
+                content         : '';
+                position        : absolute;
+                display         : none;
+                right           : 6%;
+                top             : 50%;
+                width           : 134px;
+                height          : 104px;
+                background-image: url('/images/img-“-right.png');
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .about-main {
+        background-position: center center;
+        background-repeat  : no-repeat;
+
+        .main-content {
+
+            >p {
+                text-align   : center;
+                padding-left : 250px;
+                padding-right: 250px;
+
+                &::before {
+                    display: block;
+                    top    : -10%;
+                    left   : 8%;
+                }
+
+                &::after {
+                    display: block;
+                    right  : 8%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .about-main {
+        
+    }
+}
