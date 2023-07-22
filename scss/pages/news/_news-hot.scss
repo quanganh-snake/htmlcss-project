@@ -1,0 +1,30 @@
+.news-hot {
+    margin-bottom: 60px;
+
+    .news-hot-image {
+        border-radius: 10px;
+
+        img {
+            border-radius: 10px;
+        }
+    }
+
+    .news-hot-content {
+        padding-bottom: 30px;
+
+        p.caption-1 {
+            margin-bottom: 12px;
+            color        : $greenColor-800;
+        }
+
+        h3.h3 {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .image-bottom {
+        margin-top: -200px;
+    }
+}

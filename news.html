@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>GreenChop</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="css/grid.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="header-inner">
+					<div class="row">
+						<div class="col-1 toggle-menu">
+							<label for="toggle-menu" class="toggle-menu-mobile h-100"></label>
+						</div>
+
+						<div class="col-9 col-lg-3">
+							<div class="header-logo">
+								<a href="#">
+									<img src="images/logo.png" alt="" />
+								</a>
+							</div>
+							<!--End .logo-->
+						</div>
+						<!--End .col-3-->
+						<div class="col-2 col-lg-9">
+							<div class="row h-100 align-items-center">
+								<div class="col-12 col-lg-10">
+									<input type="checkbox" id="toggle-menu" />
+									<nav class="header-menu header-menu-mobile">
+										<ul class="justify-content-end align-items-center">
+											<li>
+												<a href="index.html">Trang chủ</a>
+											</li>
+											<li><a href="./about-us.html">Về GreenChop</a></li>
+											<li>
+												<a href="./products.html">Sản phẩm</a>
+											</li>
+											<li>
+												<a href="./news.html"><span class="active">Tin tức</span></a>
+											</li>
+											<li><a href="./contact.html">Liên hệ</a></li>
+										</ul>
+									</nav>
+									<!--End .header-menu-->
+								</div>
+								<div class="col-12 col-lg-2 h-100">
+									<div class="h-100 header-icon justify-content-end">
+										<div class="cart-icon">
+											<span>3</span>
+											<a href="#" class="icon-cart">
+												<svg width="30" height="27" viewBox="0 0 30 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g id="Frame" clip-path="url(#clip0_555_377)">
+														<g id="Group">
+															<path
+																id="Vector"
+																d="M0 0.660291C0.218498 0.169817 0.588534 -0.00815772 1.12009 -0.0010149C2.74121 0.0221992 4.36291 0.00672315 5.98461 0.00791362C6.62248 0.00791362 6.905 0.229936 7.05184 0.869813C7.25389 1.75433 7.44478 2.64183 7.64977 3.57218C7.76607 3.57218 7.88883 3.57218 8.01217 3.57218C14.9871 3.57218 21.962 3.58051 28.9363 3.55908C29.6505 3.5567 30.1815 4.06206 29.9418 4.89896C28.7935 8.90786 27.6717 12.9251 26.5398 16.9388C26.3419 17.6411 26.094 17.8275 25.3634 17.8275C20.1958 17.8275 15.0282 17.8275 9.86059 17.8275C9.32727 17.8275 8.98836 18.0292 8.8521 18.4233C8.66121 18.9763 9.01949 19.534 9.61508 19.6036C9.73079 19.6173 9.84943 19.6114 9.96632 19.6114C15.1533 19.612 20.3409 19.6114 25.5278 19.612C26.0929 19.612 26.4776 19.9536 26.4946 20.4626C26.5117 20.9733 26.141 21.3786 25.6341 21.3893C25.2048 21.3983 24.7754 21.3911 24.3372 21.4114C25.0509 21.5876 25.6359 21.9584 26.0435 22.5739C26.4594 23.2018 26.5904 23.9 26.4329 24.6429C26.1645 25.9101 24.9916 26.8066 23.7088 26.7334C22.4348 26.6607 21.401 25.6768 21.2407 24.3738C21.1085 23.3018 21.6489 21.8637 23.4351 21.4054C19.5585 21.4054 15.7348 21.4054 11.9105 21.4054C12.6106 21.5852 13.195 21.9477 13.6032 22.5572C14.0162 23.1733 14.1524 23.856 14.015 24.5935C13.7842 25.831 12.6529 26.7578 11.3907 26.7381C10.1014 26.7185 9.02419 25.7595 8.82508 24.4542C8.61304 23.0637 9.4001 21.9417 11.0153 21.3923C10.5783 21.3923 10.1983 21.3929 9.81772 21.3923C8.46033 21.3905 7.4348 20.6185 7.10705 19.3518C6.80104 18.1697 7.35492 16.9757 8.51143 16.3209C8.54432 16.3025 8.57428 16.2787 8.61422 16.2513C7.55697 11.4311 6.50148 6.61621 5.44247 1.78767C4.51562 1.78767 3.60815 1.78767 2.70068 1.78767C2.18322 1.78767 1.66399 1.76267 1.1477 1.79481C0.609092 1.82755 0.222609 1.64362 0 1.13529C0 0.976956 0 0.818623 0 0.660291ZM27.9613 5.36264C21.3088 5.36264 14.6881 5.36264 8.04037 5.36264C8.82273 8.92989 9.60098 12.4811 10.3792 16.0292C15.2514 16.0292 20.1018 16.0292 24.9534 16.0292C25.956 12.4745 26.9539 8.93643 27.9613 5.36264ZM12.3081 24.0905C12.3252 23.6233 11.9252 23.1953 11.4553 23.178C10.9942 23.1608 10.5719 23.5661 10.5549 24.0423C10.5378 24.5096 10.9378 24.9375 11.4077 24.9548C11.8688 24.9721 12.2905 24.5673 12.3081 24.0905ZM23.9026 23.1798C23.4445 23.1489 23.0157 23.5423 22.984 24.0227C22.9534 24.4869 23.3417 24.9215 23.8157 24.9536C24.2738 24.9846 24.7026 24.5911 24.7343 24.1107C24.7648 23.6459 24.3766 23.2119 23.9026 23.1798Z"
+																fill="#2C2C2C"
+															/>
+														</g>
+													</g>
+													<defs>
+														<clipPath id="clip0_555_377">
+															<rect width="30" height="26.7391" fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+											</a>
+										</div>
+										<a href="#" class="icon-search">
+											<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g id="search">
+													<path
+														id="Vector"
+														d="M12.8333 22.1667C17.988 22.1667 22.1667 17.988 22.1667 12.8333C22.1667 7.67868 17.988 3.5 12.8333 3.5C7.67868 3.5 3.5 7.67868 3.5 12.8333C3.5 17.988 7.67868 22.1667 12.8333 22.1667Z"
+														stroke="black"
+														stroke-width="2"
+														stroke-linecap="round"
+														stroke-linejoin="round"
+													/>
+													<path id="Vector_2" d="M24.5 24.5L19.425 19.425" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												</g>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--End .header-inner-->
+			</div>
+		</header>
+		<!--End .header-->
+
+		<div class="page-heading mb-16x">
+			<div class="container">
+				<div class="page-heading-inner">
+					<div class="row">
+						<div class="col-12">
+							<h1 class="h1">Tin tức</h1>
+						</div>
+					</div>
+				</div>
+				<!--End .page-heading-inner-->
+			</div>
+		</div>
+		<!--End .page-heading-->
+
+		<section class="news-hot px-2x">
+			<div class="container">
+				<div class="row mb-6x">
+					<div class="col-12 col-lg-6">
+						<div class="news-hot-image">
+							<img src="./images/img_news-post02.png" class="w-100" alt="News hot" />
+						</div>
+					</div>
+					<div class="col-12 col-lg-6">
+						<div class="news-hot-content">
+							<p class="caption-1">Tin nổi bật</p>
+							<h3 class="h3">Exerci tation ullamcer suscipit m zril delenit augue</h3>
+							<p class="paragraph-4 mb-6x">
+								exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+								euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+							</p>
+							<a href="#" class="btn btn-view">Xem thêm >></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mb-6x">
+					<div class="col-12 col-lg-6">
+						<div class="news-hot-content">
+							<p class="caption-1">Tin nổi bật</p>
+							<h3 class="h3">Exerci tation ullamcer suscipit m zril delenit augue</h3>
+							<p class="paragraph-4 mb-6x">
+								exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+								euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+							</p>
+							<a href="#" class="btn btn-view">Xem thêm >></a>
+						</div>
+					</div>
+					<div class="col-12 col-lg-6">
+						<div class="news-hot-image image-bottom">
+							<img src="./images/img_news-post01.png" class="w-100" alt="News hot" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="news">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="section-header">
+							<h2 class="h2">Bài viết phổ biến</h2>
+						</div>
+						<!--End .section-header-->
+					</div>
+				</div>
+				<!--End .row-->
+
+				<div class="news-lists w-100">
+					<div class="row">
+						<div class="col-12 col-md-6">
+							<div class="news-item">
+								<div class="news-image mb-2x">
+									<a href="#"><img src="./images/img_news1.png" class="w-100" alt="" /></a>
+								</div>
+								<!--End .news-image-->
+								<div class="news-time mb-2x">
+									<p class="caption-1 text-green800">Lorem ipsum</p>
+									<p class="news-calendar">
+										<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M19 22.6802H5C3.89543 22.6802 3 21.7847 3 20.6802V6.68018C3 5.57561 3.89543 4.68018 5 4.68018H7V2.68018H9V4.68018H15V2.68018H17V4.68018H19C20.1046 4.68018 21 5.57561 21 6.68018V20.6802C21 21.7847 20.1046 22.6802 19 22.6802ZM5 10.6802V20.6802H19V10.6802H5ZM5 6.68018V8.68018H19V6.68018H5ZM17 18.6802H15V16.6802H17V18.6802ZM13 18.6802H11V16.6802H13V18.6802ZM9 18.6802H7V16.6802H9V18.6802ZM17 14.6802H15V12.6802H17V14.6802ZM13 14.6802H11V12.6802H13V14.6802ZM9 14.6802H7V12.6802H9V14.6802Z"
+												fill="#B7B7B7"
+											/>
+										</svg>
+										<span>28 - 10- 2021</span>
+									</p>
+								</div>
+								<!--End .news-time-->
+								<p class="news-title paragraph-2a mb-2x"><a href="#">Lorem ipsum dolor sit amet, cons in ectetuer adipiscing elit</a></p>
+								<p class="news-desc paragraph-4 mb-2x">
+									Dolor sit amet, cons ectetuer adipiscing elit, sed diam in on nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim...
+								</p>
+							</div>
+							<!--End .news-item-->
+						</div>
+						<!--End .col-->
+
+						<div class="col-12 col-md-6">
+							<div class="news-item">
+								<div class="news-image mb-2x">
+									<a href="#"><img src="./images/img_news1.png" class="w-100" alt="" /></a>
+								</div>
+								<!--End .news-image-->
+								<div class="news-time mb-2x">
+									<p class="caption-1 text-green800">Lorem ipsum</p>
+									<p class="news-calendar">
+										<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M19 22.6802H5C3.89543 22.6802 3 21.7847 3 20.6802V6.68018C3 5.57561 3.89543 4.68018 5 4.68018H7V2.68018H9V4.68018H15V2.68018H17V4.68018H19C20.1046 4.68018 21 5.57561 21 6.68018V20.6802C21 21.7847 20.1046 22.6802 19 22.6802ZM5 10.6802V20.6802H19V10.6802H5ZM5 6.68018V8.68018H19V6.68018H5ZM17 18.6802H15V16.6802H17V18.6802ZM13 18.6802H11V16.6802H13V18.6802ZM9 18.6802H7V16.6802H9V18.6802ZM17 14.6802H15V12.6802H17V14.6802ZM13 14.6802H11V12.6802H13V14.6802ZM9 14.6802H7V12.6802H9V14.6802Z"
+												fill="#B7B7B7"
+											/>
+										</svg>
+										<span>28 - 10- 2021</span>
+									</p>
+								</div>
+								<!--End .news-time-->
+								<p class="news-title paragraph-2a mb-2x"><a href="#">Lorem ipsum dolor sit amet, cons in ectetuer adipiscing elit</a></p>
+								<p class="news-desc paragraph-4 mb-2x">
+									Dolor sit amet, cons ectetuer adipiscing elit, sed diam in on nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim...
+								</p>
+							</div>
+							<!--End .news-item-->
+						</div>
+						<!--End .col-->
+
+						<div class="col-12 col-md-6">
+							<div class="news-item">
+								<div class="news-image mb-2x">
+									<a href="#"><img src="./images/img_news1.png" class="w-100" alt="" /></a>
+								</div>
+								<!--End .news-image-->
+								<div class="news-time mb-2x">
+									<p class="caption-1 text-green800">Lorem ipsum</p>
+									<p class="news-calendar">
+										<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M19 22.6802H5C3.89543 22.6802 3 21.7847 3 20.6802V6.68018C3 5.57561 3.89543 4.68018 5 4.68018H7V2.68018H9V4.68018H15V2.68018H17V4.68018H19C20.1046 4.68018 21 5.57561 21 6.68018V20.6802C21 21.7847 20.1046 22.6802 19 22.6802ZM5 10.6802V20.6802H19V10.6802H5ZM5 6.68018V8.68018H19V6.68018H5ZM17 18.6802H15V16.6802H17V18.6802ZM13 18.6802H11V16.6802H13V18.6802ZM9 18.6802H7V16.6802H9V18.6802ZM17 14.6802H15V12.6802H17V14.6802ZM13 14.6802H11V12.6802H13V14.6802ZM9 14.6802H7V12.6802H9V14.6802Z"
+												fill="#B7B7B7"
+											/>
+										</svg>
+										<span>28 - 10- 2021</span>
+									</p>
+								</div>
+								<!--End .news-time-->
+								<p class="news-title paragraph-2a mb-2x"><a href="#">Lorem ipsum dolor sit amet, cons in ectetuer adipiscing elit</a></p>
+								<p class="news-desc paragraph-4 mb-2x">
+									Dolor sit amet, cons ectetuer adipiscing elit, sed diam in on nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim...
+								</p>
+							</div>
+							<!--End .news-item-->
+						</div>
+						<!--End .col-->
+
+						<div class="col-12 col-md-6">
+							<div class="news-item">
+								<div class="news-image mb-2x">
+									<a href="#"><img src="./images/img_news1.png" class="w-100" alt="" /></a>
+								</div>
+								<!--End .news-image-->
+								<div class="news-time mb-2x">
+									<p class="caption-1 text-green800">Lorem ipsum</p>
+									<p class="news-calendar">
+										<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M19 22.6802H5C3.89543 22.6802 3 21.7847 3 20.6802V6.68018C3 5.57561 3.89543 4.68018 5 4.68018H7V2.68018H9V4.68018H15V2.68018H17V4.68018H19C20.1046 4.68018 21 5.57561 21 6.68018V20.6802C21 21.7847 20.1046 22.6802 19 22.6802ZM5 10.6802V20.6802H19V10.6802H5ZM5 6.68018V8.68018H19V6.68018H5ZM17 18.6802H15V16.6802H17V18.6802ZM13 18.6802H11V16.6802H13V18.6802ZM9 18.6802H7V16.6802H9V18.6802ZM17 14.6802H15V12.6802H17V14.6802ZM13 14.6802H11V12.6802H13V14.6802ZM9 14.6802H7V12.6802H9V14.6802Z"
+												fill="#B7B7B7"
+											/>
+										</svg>
+										<span>28 - 10- 2021</span>
+									</p>
+								</div>
+								<!--End .news-time-->
+								<p class="news-title paragraph-2a mb-2x"><a href="#">Lorem ipsum dolor sit amet, cons in ectetuer adipiscing elit</a></p>
+								<p class="news-desc paragraph-4 mb-2x">
+									Dolor sit amet, cons ectetuer adipiscing elit, sed diam in on nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim...
+								</p>
+							</div>
+							<!--End .news-item-->
+						</div>
+						<!--End .col-->
+
+						<div class="col-12 col-md-6">
+							<div class="news-item">
+								<div class="news-image mb-2x">
+									<a href="#"><img src="./images/img_news1.png" class="w-100" alt="" /></a>
+								</div>
+								<!--End .news-image-->
+								<div class="news-time mb-2x">
+									<p class="caption-1 text-green800">Lorem ipsum</p>
+									<p class="news-calendar">
+										<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M19 22.6802H5C3.89543 22.6802 3 21.7847 3 20.6802V6.68018C3 5.57561 3.89543 4.68018 5 4.68018H7V2.68018H9V4.68018H15V2.68018H17V4.68018H19C20.1046 4.68018 21 5.57561 21 6.68018V20.6802C21 21.7847 20.1046 22.6802 19 22.6802ZM5 10.6802V20.6802H19V10.6802H5ZM5 6.68018V8.68018H19V6.68018H5ZM17 18.6802H15V16.6802H17V18.6802ZM13 18.6802H11V16.6802H13V18.6802ZM9 18.6802H7V16.6802H9V18.6802ZM17 14.6802H15V12.6802H17V14.6802ZM13 14.6802H11V12.6802H13V14.6802ZM9 14.6802H7V12.6802H9V14.6802Z"
+												fill="#B7B7B7"
+											/>
+										</svg>
+										<span>28 - 10- 2021</span>
+									</p>
+								</div>
+								<!--End .news-time-->
+								<p class="news-title paragraph-2a mb-2x"><a href="#">Lorem ipsum dolor sit amet, cons in ectetuer adipiscing elit</a></p>
+								<p class="news-desc paragraph-4 mb-2x">
+									Dolor sit amet, cons ectetuer adipiscing elit, sed diam in on nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim...
+								</p>
+							</div>
+							<!--End .news-item-->
+						</div>
+						<!--End .col-->
+
+						<div class="col-12 col-md-6">
+							<div class="news-item">
+								<div class="news-image mb-2x">
+									<a href="#"><img src="./images/img_news1.png" class="w-100" alt="" /></a>
+								</div>
+								<!--End .news-image-->
+								<div class="news-time mb-2x">
+									<p class="caption-1 text-green800">Lorem ipsum</p>
+									<p class="news-calendar">
+										<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M19 22.6802H5C3.89543 22.6802 3 21.7847 3 20.6802V6.68018C3 5.57561 3.89543 4.68018 5 4.68018H7V2.68018H9V4.68018H15V2.68018H17V4.68018H19C20.1046 4.68018 21 5.57561 21 6.68018V20.6802C21 21.7847 20.1046 22.6802 19 22.6802ZM5 10.6802V20.6802H19V10.6802H5ZM5 6.68018V8.68018H19V6.68018H5ZM17 18.6802H15V16.6802H17V18.6802ZM13 18.6802H11V16.6802H13V18.6802ZM9 18.6802H7V16.6802H9V18.6802ZM17 14.6802H15V12.6802H17V14.6802ZM13 14.6802H11V12.6802H13V14.6802ZM9 14.6802H7V12.6802H9V14.6802Z"
+												fill="#B7B7B7"
+											/>
+										</svg>
+										<span>28 - 10- 2021</span>
+									</p>
+								</div>
+								<!--End .news-time-->
+								<p class="news-title paragraph-2a mb-2x"><a href="#">Lorem ipsum dolor sit amet, cons in ectetuer adipiscing elit</a></p>
+								<p class="news-desc paragraph-4 mb-2x">
+									Dolor sit amet, cons ectetuer adipiscing elit, sed diam in on nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim...
+								</p>
+							</div>
+							<!--End .news-item-->
+						</div>
+						<!--End .col-->
+					</div>
+
+					<div class="news-panigate">
+						<ul>
+							<li><a href="#" class="active">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+						</ul>
+					</div>
+				</div>
+				<!--End .news-lists-->
+			</div>
+		</section>
+		<!--End .news-->
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-top w-100">
+					<div class="row">
+						<div class="col-6 col-lg-6 col-xl-3">
+							<div class="footer-brand">
+								<img src="./images/logo.png" alt="" />
+								<p class="paragraph-4">GreenChop là bạn đồng hành của người tiêu dùng</p>
+							</div>
+						</div>
+						<div class="col-6 col-lg-6 col-xl-3">
+							<p class="paragraph-3a text-green800">Trang chủ</p>
+							<ul>
+								<li><a href="#">Về GreenChop</a></li>
+								<li><a href="#">Sản phẩm</a></li>
+								<li><a href="#">Tin tức</a></li>
+							</ul>
+						</div>
+						<div class="col-6 col-lg-6 col-xl-3">
+							<p class="paragraph-3a text-green800">Hỗ trợ</p>
+							<ul>
+								<li>Đặt hàng trực tuyến (8h-22h)</li>
+								<li>
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g id="basic / alarm">
+											<path
+												id="coolicon"
+												d="M11.999 22C7.05569 21.9349 3.06417 17.9433 2.99902 13C3.06417 8.05669 7.05569 4.06517 11.999 4.00002C16.9423 4.06517 20.9339 8.05669 20.999 13C20.9339 17.9433 16.9423 21.9349 11.999 22ZM11.999 6.00002C8.15418 6.05063 5.04963 9.15518 4.99902 13C5.04963 16.8448 8.15418 19.9494 11.999 20C15.8438 19.9494 18.9484 16.8448 18.999 13C18.9484 9.15518 15.8438 6.05063 11.999 6.00002ZM16.999 14H10.999V8.00002H12.999V12H16.999V14ZM20.291 6.70802L17.282 3.70802L18.691 2.29102L21.701 5.29102L20.291 6.70702V6.70802ZM3.70602 6.70802L2.29102 5.29102L5.28202 2.29102L6.69702 3.70802L3.70802 6.70802H3.70602Z"
+												fill="#FF6916"
+											/>
+										</g>
+									</svg>
+
+									<strong class="paragraph-4a">Thứ 2 - Thứ 6</strong>
+								</li>
+								<li>
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M8.74214 8.68189C7.66901 9.59373 7.27576 11.2567 8.20237 12.5908C9.06948 13.8392 10.1618 14.9313 11.4099 15.798C12.7441 16.7244 14.407 16.3311 15.3187 15.2579L15.3289 15.2626C16.4934 15.8021 17.7304 16.1718 19 16.3603V19L18.9989 19L18.9961 19C11.0215 19.0113 4.99148 12.9111 5.00001 5.00359V5H7.63937L7.63954 5.00117C7.828 6.27065 8.19761 7.50654 8.73714 8.67108L8.74214 8.68189ZM18.9989 21H20C20.5523 21 21 20.5523 21 20V15.4977C21 15.0021 20.637 14.5813 20.1468 14.5086L19.2926 14.3818C18.2123 14.2215 17.1605 13.9069 16.1695 13.4478L15.4166 13.0991C14.9804 12.897 14.462 13.034 14.1826 13.4253L13.8418 13.9024C13.5431 14.3206 12.9728 14.4484 12.5506 14.1552C11.4984 13.4245 10.5761 12.5024 9.84502 11.4499C9.55181 11.0277 9.67955 10.4574 10.0978 10.1587L10.5748 9.81807C10.9661 9.53861 11.1031 9.02021 10.901 8.5839L10.5518 7.83033C10.0927 6.8394 9.77823 5.78774 9.61786 4.70749L9.49104 3.85316C9.41827 3.36296 8.99745 3 8.50188 3H4.00001C3.44773 3 3.00001 3.44772 3.00001 4V5.00143C2.99029 14.0079 9.91023 21.0129 18.9989 21Z"
+											fill="#FF6916"
+										/>
+									</svg>
+
+									<strong class="paragraph-4a">091 1717 222</strong>
+								</li>
+							</ul>
+						</div>
+						<div class="col-6 col-lg-6 col-xl-3">
+							<p class="paragraph-3a text-green800">Liên hệ</p>
+							<ul>
+								<li>
+									<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M20 20.5H4C2.89543 20.5 2 19.6046 2 18.5V6.413C2.04661 5.34255 2.92853 4.49899 4 4.5H20C21.1046 4.5 22 5.39543 22 6.5V18.5C22 19.6046 21.1046 20.5 20 20.5ZM4 8.368V18.5H20V8.368L12 13.7L4 8.368ZM4.8 6.5L12 11.3L19.2 6.5H4.8Z"
+											fill="#FF6916"
+										/>
+									</svg>
+
+									<span>greenchopvn@gmail.com</span>
+								</li>
+								<li>
+									<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g id="globe">
+											<path
+												id="Vector (Stroke)"
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M12 4.31818C7.48131 4.31818 3.81818 7.98131 3.81818 12.5C3.81818 17.0187 7.48131 20.6818 12 20.6818C16.5187 20.6818 20.1818 17.0187 20.1818 12.5C20.1818 7.98131 16.5187 4.31818 12 4.31818ZM2 12.5C2 6.97715 6.47715 2.5 12 2.5C17.5228 2.5 22 6.97715 22 12.5C22 18.0228 17.5228 22.5 12 22.5C6.47715 22.5 2 18.0228 2 12.5Z"
+												fill="#FF6916"
+											/>
+											<path
+												id="Vector (Stroke)_2"
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M2 12.5C2 11.9477 2.40701 11.5 2.90909 11.5H21.0909C21.593 11.5 22 11.9477 22 12.5C22 13.0523 21.593 13.5 21.0909 13.5H2.90909C2.40701 13.5 2 13.0523 2 12.5Z"
+												fill="#FF6916"
+											/>
+											<path
+												id="Vector (Stroke)_3"
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M9.00023 12.3498C9.06877 15.1871 10.1263 17.9187 12 20.1463C13.8737 17.9187 14.9312 15.1871 14.9998 12.3498C14.9312 9.51249 13.8737 6.78087 12 4.55331C10.1263 6.78087 9.06877 9.51249 9.00023 12.3498ZM12 3.12232L11.2617 2.5C8.59689 5.19196 7.08251 8.68543 7.00022 12.3306C6.99993 12.3434 6.99993 12.3562 7.00022 12.369C7.08251 16.0141 8.59689 19.5076 11.2617 22.1996C11.4511 22.391 11.7191 22.5 12 22.5C12.2809 22.5 12.5489 22.391 12.7383 22.1996C15.4031 19.5076 16.9175 16.0141 16.9998 12.369C17.0001 12.3562 17.0001 12.3434 16.9998 12.3306C16.9175 8.68543 15.4031 5.19196 12.7383 2.5L12 3.12232Z"
+												fill="#FF6916"
+											/>
+										</g>
+									</svg>
+
+									<span>Greenchop.vn</span>
+								</li>
+								<li>
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g id="map-pin">
+											<path
+												id="Vector (Stroke)"
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M12 2.83335C10.0904 2.83335 8.25909 3.60597 6.90883 4.98125C5.55857 6.35652 4.8 8.2218 4.8 10.1667C4.8 13.0066 6.61416 15.7623 8.60336 17.9009C9.57955 18.9505 10.5588 19.8097 11.295 20.4068C11.569 20.629 11.8083 20.8141 12 20.9584C12.1917 20.8141 12.431 20.629 12.705 20.4068C13.4412 19.8097 14.4204 18.9505 15.3966 17.9009C17.3858 15.7623 19.2 13.0066 19.2 10.1667C19.2 8.2218 18.4414 6.35652 17.0912 4.98125C15.7409 3.60597 13.9096 2.83335 12 2.83335ZM12 22.0835C11.5008 22.8462 11.5005 22.8461 11.5003 22.8459L11.4977 22.8441L11.4917 22.84L11.4711 22.8258C11.4536 22.8137 11.4286 22.7963 11.3966 22.7737C11.3327 22.7286 11.2408 22.6629 11.125 22.5778C10.8935 22.4075 10.5657 22.1589 10.1737 21.8409C9.3912 21.2063 8.34545 20.2894 7.29664 19.1618C5.23584 16.9462 3 13.7435 3 10.1667C3 7.73557 3.94821 5.40397 5.63604 3.68487C7.32387 1.96578 9.61305 1 12 1C14.3869 1 16.6761 1.96578 18.364 3.68487C20.0518 5.40397 21 7.73557 21 10.1667C21 13.7435 18.7642 16.9462 16.7034 19.1618C15.6546 20.2894 14.6088 21.2063 13.8263 21.8409C13.4343 22.1589 13.1065 22.4075 12.875 22.5778C12.7592 22.6629 12.6673 22.7286 12.6034 22.7737C12.5714 22.7963 12.5464 22.8137 12.5289 22.8258L12.5083 22.84L12.5023 22.8441L12.5004 22.8454C12.5001 22.8456 12.4992 22.8462 12 22.0835ZM12 22.0835L12.4992 22.8462C12.1969 23.0515 11.8026 23.0512 11.5003 22.8459L12 22.0835Z"
+												fill="#FF6916"
+											/>
+											<path
+												id="Vector (Stroke)_2"
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8ZM8 10C8 7.79086 9.79086 6 12 6C14.2091 6 16 7.79086 16 10C16 12.2091 14.2091 14 12 14C9.79086 14 8 12.2091 8 10Z"
+												fill="#FF6916"
+											/>
+										</g>
+									</svg>
+
+									<span>428 Điện Biên Phủ, P11, Quận 10, TPHCM</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--End .footer-top-->
+
+				<div class="footer-bottom w-100">
+					<div class="row justify-content-space-between align-items-center">
+						<div class="col-3">
+							<img src="./images/img_notifyBCT.png" alt="" />
+						</div>
+
+						<div class="col-4">
+							<ul class="footer-social">
+								<li>
+									<a href="#">
+										<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g id="brand / youtube">
+												<path
+													id="coolicon"
+													d="M14.0068 21.8536H13.9844C13.915 21.8536 6.96762 21.8402 5.21482 21.3642C4.25098 21.1045 3.49825 20.3514 3.23914 19.3874C2.92395 17.6092 2.77175 15.806 2.78442 14.0002C2.77628 12.1914 2.9326 10.3856 3.25146 8.60512C3.51769 7.64025 4.26711 6.88362 5.22938 6.60816C6.93402 6.16016 13.6899 6.16016 13.9766 6.16016H14.0001C14.0707 6.16016 21.0359 6.1736 22.7708 6.6496C23.7326 6.91057 24.4838 7.66218 24.7443 8.62416C25.0695 10.4089 25.2221 12.2209 25.2001 14.0349C25.2079 15.8415 25.0512 17.645 24.7319 19.4232C24.4695 20.386 23.7163 21.1375 22.7529 21.3978C21.0505 21.8491 14.2935 21.8536 14.0068 21.8536ZM11.7668 10.6458L11.7612 17.3658L17.5987 14.0058L11.7668 10.6458Z"
+													fill="#2C2C2C"
+												/>
+											</g>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g id="brand / facebook">
+												<path
+													id="coolicon"
+													d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z"
+													fill="#2C2C2C"
+												/>
+											</g>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g id="brand / instagram">
+												<g id="Group 747">
+													<g id="Group">
+														<path
+															id="Vector"
+															d="M4.19676 1.8335C8.73204 1.8335 13.2678 1.8335 17.803 1.8335C17.8299 1.84471 17.856 1.86175 17.8842 1.86623C19.2108 2.08147 20.1633 3.1774 20.1642 4.51099C20.1673 8.8373 20.1678 13.1636 20.1642 17.4895C20.1628 18.9702 18.9717 20.1616 17.4909 20.1629C13.1642 20.1665 8.83742 20.1715 4.51113 20.1594C3.39626 20.1562 2.58275 19.61 2.09169 18.6128C1.96791 18.3608 1.91768 18.0729 1.83337 17.8016C1.83337 13.2668 1.83337 8.73148 1.83337 4.19665C1.84459 4.16929 1.86118 4.14329 1.86611 4.11504C2.02666 3.16305 2.54867 2.48011 3.41913 2.07519C3.66309 1.96219 3.93665 1.91242 4.19676 1.8335ZM10.8685 6.13829C8.08042 6.24053 5.93948 8.67318 6.23591 11.483C6.4996 13.9838 8.74684 16.0474 11.5511 15.7622C14.044 15.5084 16.1236 13.2627 15.8343 10.4529C15.5737 7.92702 13.3884 6.05309 10.8685 6.13829ZM18.0156 5.61813C18.0026 4.77555 17.4115 4.01952 16.4361 3.99127C15.6056 3.96751 14.836 4.57421 14.8051 5.55893C14.7782 6.40554 15.4038 7.17368 16.3859 7.19476C17.2384 7.21314 17.9613 6.58446 18.0156 5.61813Z"
+															fill="#2C2C2C"
+														/>
+														<path
+															id="Vector_2"
+															d="M11.0435 7.20459C13.1208 7.20773 14.8016 8.89916 14.7949 10.9798C14.7881 13.0488 13.1006 14.725 11.0282 14.7218C8.95098 14.7187 7.27015 13.0273 7.27688 10.9466C7.2836 8.87763 8.97116 7.20146 11.0435 7.20459Z"
+															fill="#2C2C2C"
+														/>
+														<path
+															id="Vector_3"
+															d="M16.4034 6.12881C16.1011 6.12746 15.8657 5.88487 15.8711 5.5804C15.876 5.28668 16.1141 5.0553 16.4106 5.05665C16.7128 5.05799 16.9483 5.30059 16.9429 5.60506C16.9379 5.89877 16.6994 6.13016 16.4034 6.12881Z"
+															fill="#2C2C2C"
+														/>
+													</g>
+												</g>
+											</g>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#"
+										><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g id="brand / twitter">
+												<path
+													id="coolicon"
+													d="M19.6752 6.90065C20.5358 6.38617 21.1797 5.57607 21.4867 4.6216C20.6781 5.10142 19.7933 5.43941 18.8707 5.62096C17.5916 4.26787 15.565 3.93859 13.9233 4.81711C12.2815 5.69564 11.4312 7.56448 11.8474 9.37936C8.53497 9.21307 5.44892 7.6484 3.35711 5.07473C2.26544 6.95769 2.82331 9.36476 4.63199 10.5755C3.97795 10.5545 3.33842 10.3774 2.76671 10.059C2.76671 10.0763 2.76671 10.0936 2.76671 10.1109C2.76709 12.0723 4.14947 13.7618 6.07199 14.1506C5.46533 14.3156 4.82899 14.3399 4.21151 14.2216C4.75218 15.899 6.29812 17.0481 8.06015 17.0824C6.60079 18.2278 4.79853 18.849 2.94335 18.8459C2.61452 18.8464 2.28595 18.8275 1.95935 18.7893C3.84324 19.9999 6.03587 20.6424 8.27519 20.6402C11.3906 20.6616 14.3847 19.4334 16.5876 17.2303C18.7905 15.0272 20.0184 12.033 19.9968 8.91761C19.9968 8.73904 19.9926 8.56145 19.9843 8.38481C20.7911 7.8017 21.4875 7.07935 22.0406 6.25169C21.289 6.58487 20.4916 6.80361 19.6752 6.90065Z"
+													fill="#2C2C2C"
+												/>
+											</g>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!--End .footer-->
+	</body>
+</html>

@@ -165,7 +165,23 @@ textarea::-webkit-input-placeholder {
     font-weight: 700;
 }
 
+.mb-6x {
+    margin-bottom: 60px;
+}
+
+.mb-16x {
+    margin-bottom: 160px;
+}
+
 @for $i from 1 through 5 {
+
+    .mt-#{$i}x {
+        margin-top: calc($i * 10) + px;
+    }
+
+    .mb-#{$i}x {
+        margin-bottom: calc($i * 10) + px;
+    }
 
     .mx-#{$i}x {
         margin: 0 calc($i * 10) + px;
@@ -183,6 +199,8 @@ textarea::-webkit-input-placeholder {
         padding: calc($i * 10) + px 0;
     }
 }
+
+
 
 .section-header {
     @include section-header;

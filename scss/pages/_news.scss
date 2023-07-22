@@ -1,6 +1,5 @@
 .news {
     @include section;
-    margin-top: -300px;
 
     .section-header {
         margin-bottom: 60px;
@@ -43,6 +42,34 @@
         .news-more {
             display        : flex;
             justify-content: center;
+        }
+
+        .news-panigate {
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+
+            ul {
+                display: flex;
+
+                li {
+                    a {
+                        display    : block;
+                        padding    : 0 10px;
+                        font-size  : 2rem;
+                        font-style : normal;
+                        font-weight: 400;
+
+                        &.active {
+                            color: $greenColor-800;
+                        }
+
+                        &:hover {
+                            color: $greenColor-800;
+                        }
+                    }
+                }
+            }
         }
     }
 }

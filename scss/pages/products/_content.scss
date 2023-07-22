@@ -1,4 +1,6 @@
 section.content {
+    padding: 0 20px;
+
     .content-left {
         position: relative;
 
@@ -38,8 +40,13 @@ section.content {
             position : absolute;
             top      : 0;
             right    : 0;
-            transform: translate(25%, -10%);
+            // transform: translate(25%, -10%);
+            transform: translate(0, -10%);
             z-index  : -1;
         }
     }
+}
+
+@media screen and (min-width: 992px) {
+    
 }
