@@ -3,6 +3,7 @@
     object-fit   : contain;
     height       : 470px;
     margin-bottom: 120px;
+    overflow     : hidden;
 
     .main-content {
         color          : #FFFFFF;
@@ -46,6 +47,7 @@
     .about-main {
         background-position: center center;
         background-repeat  : no-repeat;
+        overflow           : none;
 
         .main-content {
 
@@ -70,7 +72,5 @@
 }
 
 @media screen and (min-width: 1600px) {
-    .about-main {
-        
-    }
+    .about-main {}
 }

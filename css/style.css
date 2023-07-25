@@ -1346,6 +1346,7 @@ textarea::-webkit-input-placeholder {
   object-fit: contain;
   height: 470px;
   margin-bottom: 120px;
+  overflow: hidden;
 }
 .about-main .main-content {
   color: #FFFFFF;
@@ -1385,6 +1386,7 @@ textarea::-webkit-input-placeholder {
   .about-main {
     background-position: center center;
     background-repeat: no-repeat;
+    overflow: none;
   }
   .about-main .main-content > p {
     text-align: center;
